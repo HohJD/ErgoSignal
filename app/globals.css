@@ -3,10 +3,28 @@
 @tailwind utilities;
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: #0a1015; }
-body { margin: 0; background: #0a1015; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-.eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: .16em; text-transform: uppercase; color: #7af7d0; }
+:root { --color-ink: 10 16 21; --color-panel: 18 27 34; --color-mint: 122 247 208; --color-cloud: 232 236 232; }
+.theme-light { --color-ink: 247 251 250; --color-panel: 232 241 240; --color-mint: 5 119 98; --color-cloud: 20 43 52; }
+html { scroll-behavior: smooth; background: rgb(var(--color-ink)); }
+body { margin: 0; background: rgb(var(--color-ink)); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--color-mint)); }
 .eyebrow::before { content: ""; display: inline-block; width: 18px; height: 1px; margin: 0 9px 3px 0; background: currentColor; }
-.grid-glow { background: radial-gradient(circle, rgba(122,247,208,.16), rgba(122,247,208,0) 68%); }
-.skeleton-node { position:absolute; display:block; width:11px; height:11px; border-radius:99px; background:#7af7d0; box-shadow:0 0 17px rgba(122,247,208,.8); }
-.skeleton-line { position:absolute; display:block; width:2px; transform-origin:top; background:linear-gradient(#7af7d0, rgba(122,247,208,.25)); }
+.grid-glow { background: radial-gradient(circle, rgb(var(--color-mint) / .16), rgb(var(--color-mint) / 0) 68%); }
+.skeleton-node { position:absolute; display:block; width:11px; height:11px; border-radius:99px; background:rgb(var(--color-mint)); box-shadow:0 0 17px rgb(var(--color-mint) / .8); }
+.skeleton-line { position:absolute; display:block; width:2px; transform-origin:top; background:linear-gradient(rgb(var(--color-mint)), rgb(var(--color-mint) / .25)); }
+
+.theme-light .bg-\[\#0d161c\],
+.theme-light .bg-\[\#0d171d\],
+.theme-light .bg-\[\#0c151a\],
+.theme-light .bg-\[\#0a1217\] { background-color: #f1f7f6; }
+.theme-light .bg-\[\#101a20\],
+.theme-light .bg-\[\#101b21\],
+.theme-light .bg-\[\#111c23\] { background-color: #e8f1f0; }
+.theme-light [class*="border-white"] { border-color: rgb(20 43 52 / .14) !important; }
+.theme-light [class*="bg-white"] { background-color: rgb(20 43 52 / .045) !important; }
+.theme-light .text-white { color: #142b34; }
+.theme-light .text-slate-200 { color: #304852; }
+.theme-light .text-slate-300 { color: #3d5661; }
+.theme-light .text-slate-400 { color: #526b77; }
+.theme-light .text-slate-500 { color: #657e89; }
+.theme-light .text-slate-600 { color: #718892; }

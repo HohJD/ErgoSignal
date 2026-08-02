@@ -17,7 +17,7 @@ const roadmap = [
 ];
 
 export default function Home() {
-  return <main className="overflow-hidden bg-ink text-cloud selection:bg-mint selection:text-ink">
+  return <main id="top" className="overflow-hidden bg-ink text-cloud selection:bg-mint selection:text-ink">
     <Navbar />
     <section className="relative mx-auto grid min-h-[720px] max-w-7xl items-center gap-16 px-6 pb-24 pt-24 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:pb-28 lg:pt-28">
       <div className="grid-glow absolute -right-1/4 top-0 h-[650px] w-[650px] rounded-full opacity-80" />
