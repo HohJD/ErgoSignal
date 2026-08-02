@@ -1,0 +1,2 @@
+type Props = { eyebrow: string; title: string; description?: string };
+export function SectionHeading({ eyebrow, title, description }: Props) { return <div className="max-w-3xl"><p className="eyebrow">{eyebrow}</p><h2 className="text-4xl font-medium leading-[1.03] tracking-[-.055em] text-cloud sm:text-5xl">{title}</h2>{description && <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">{description}</p>}</div>; }
