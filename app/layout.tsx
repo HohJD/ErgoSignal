@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Private, on-device posture signals for healthier screen-based work.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: [{ url: "/icon.png", type: "image/png" }] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
